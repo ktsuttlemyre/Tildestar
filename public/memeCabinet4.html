@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>~*</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="Interactivity">
+    	<meta name="author" content="Kyle Suttlemyre Twitter@ktsuttlemyre">
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    	<!-- Fav and touch icons -->
+		<!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="../assets/ico/favicon.png">
+		-->
+
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/themes/pageLayout.css" />
+		<link rel="stylesheet" type="text/css" href="css/themes/day.css" />
+		<link rel="stylesheet" href="css/tildestar.css">
+		<style>
+
+		body {
+		  counter-reset: section;           /* Set the section counter to 0 */
+		}
+
+		.meme{width:200px;height:120px;background-color: gray;color: white}
+		.meme:after { content:'words words \000D \2713  \000D more words';}
+		.meme:before {counter-increment: section;      /* Increment the section counter */
+  		content: "MEME " counter(section) ": "; /* Display the counter */
+  		}
+
+  		.no-phone .span11 .meme{
+  			width:600px; height:480px; float:none;
+  		}
+  		.phone .span11 .meme{
+  			width:260px; height:200px; float:none;
+  		}
+		.actions ul {margin:0em .40em;list-style: none}
+		
+		.phone .thumbnails>li{
+			float:left !important; /*override bootstrap phone*/
+		}
+
+		</style>
+        <script src="vendor/modernizr-2.6.2.min.js"></script>
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+	<div id="nav" class="navbar navbar-inverse navbar-fluid-top">
+      <div class="navbar-inner">
+			<div class="container">
+
+				<a class="brand" href="#">~*</a>
+				<div class="btn-group">
+					<button class="btn btn-inverse">Chess</button>
+					<button class="btn btn-inverse">Store</button>
+					<button class="btn btn-inverse">Players</button>
+					<button class="btn btn-inverse"><span class="icon-share icon-white"></span></button>
+				</div>
+
+				<ul class="responsive-utilities-test">
+					<li class="visible-phone" name="phone">p</li>
+					<li class="visible-tablet" name="tablet">t</li>
+					<li class="visible-desktop" name="desktop">d</li>
+				</ul>
+
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse pull-right">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#chat">Chat</a></li>
+						<li><a href="#wiki">Wiki</a></li>
+						<li><a href="#blog">Blog</a></li>
+						<li><a href="#dev">Dev</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+
+			</div>
+		</div>
+	</div>
+
+	 	<div id="content" class="container-fluid">
+	 		<div class="row-fluid">
+	 			<!--<div class="span1" style='background-color:red'><!-- empty to make 'center' --</div>-->
+	 			<div class="span12" >
+				<ul class="thumbnails">
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li name='up'>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+					<li>
+						<div class="thumbnail clearfix">
+							<div class="meme pull-right"></div>
+							<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+						</div>
+					</li>
+				</ul>
+
+	 		<!--
+  			<section id="pageSection">
+				<header class="sectionHeader"></header>
+				<article class="sectionArticle"></article>
+				<footer class="sectionFooter"></footer>
+			</section>
+
+ 			<aside id="aside"></aside>
+ 		-->
+ 				</div>
+ 				<!--<div class="span1" style='background-color:red'><!-- empty to make 'center' --</div>-->
+ 			</div>
+		</div>
+		<footer id="footer"></footer>
+	
+	<div class="tmpl">
+		<script id="tmpl-thumbnail-li" type="text/x-underscore-tmpl">
+			<li id="<%= id %>">
+				<div class="thumbnail clearfix">
+					<div class="meme pull-right"></div>
+					<div class="actions"><ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul></div>
+				</div>
+			</li>
+		</script>
+	</div>
+
+	<!--<div id='toleranceMarker' class="tooltip fade left in" style="position:fixed;right:10px; display: block;"><div class="tooltip-arrow" style=""></div><div class="tooltip-inner">HERE</div></div>-->
+
+	<div id="annixScripts">
+		<!--vendors-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+		<script src="/vendor/jquery-cookie/jquery.cookie.js"></script>
+		<script src="/vendor/form/jquery.form.js"></script>
+		<script src="/vendor/URI.js"></script>
+		<script src="/vendor/lodash/dist/lodash.min.js"></script>
+		<script src="/vendor/backbone/backbone-min.js"></script>
+		<!--<script src="js/Stallion/"></script>-->
+		<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="/js/plugins.js"></script>
+		<script src="/js/tildestar.js"></script>
+
+		<script>
+		(function(){
+		var mediaGrid,body,thumbnails,carrot; 
+		var thumbnailFull="span11";
+
+		var tmpCounter = 0;
+
+		var moveCarrot = function(event,scrollSpeed){
+				if(carrot){
+					carrot.removeClass(thumbnailFull);
+				}
+
+				carrot=$(this).addClass(thumbnailFull);
+				//_.defer(
+				scrollTo(carrot,scrollSpeed);
+
+			}
+		var scrollTo =function(carrot,scrollSpeed){
+				var pos = carrot.offset().top-(Math.max((win.height()/10),30));
+
+				if(pos != body.scrollTop()){
+					if(scrollSpeed==0){
+						body.scrollTop(pos)
+						return;
+					}
+					body.animate({
+						'scrollTop':pos
+						}
+					, scrollSpeed||500);
+				}
+		}
+		var timerID;
+		var loadMore = function(number){
+			var json = {}
+			for(var i=0,l=number;i<l;i++){
+				json[tmpCounter++]={'data':true}
+			}
+
+			_.each(json,function(value,key,obj){
+				var tmp= tildestar.tmpl('tmpl-thumbnail-li',{id:key});
+				tmp.click(moveCarrot);
+				thumbnails.append(tmp);
+			});
+			
+			if(timerID){
+				clearTimeout(timerID);
+			}
+			timerID = _.defer(checkDocLength);
+
+		}
+		var addHooks = function(elements){
+			elements.each(function(){
+				$( "#toggle" ).toggle( "bounce", { times: 3 }, "slow" );
+			})
+		}
+		var win = $(window),doc = $(document);
+
+		var checkDocLength = function(){
+			//alert($(document).height() - $(window).height())
+				if (win.scrollTop() >= (doc.height() - win.height()) /*dynamic tolerance*/-(Math.max(win.height(),500)) ) {
+					loadMore(10);
+				}
+		}
+
+
+		$(function(){//document ready
+			thumbnails=$('.thumbnails')
+			body = $(document.body);
+
+			carrot = $(".thumbnails > li").click(moveCarrot)
+			//go ahead and select the first one
+			.first().addClass(thumbnailFull);
+
+			//handle endless scrolling
+			
+			win.scroll(_.debounce(checkDocLength//debounce scrolling ALWAYS!
+			,700,false)); //true means leading edge
+
+			//handle key events
+			var Key = Stallion.keyboard.keys;
+			body.keyup(function(e) {
+					if(e.which == Key['right-arrow']){
+						moveCarrot.call(carrot.next(),e,0);
+					}else if(e.which == Key['left-arrow']){
+						moveCarrot.call(carrot.prev(),e,0);
+					}
+				}).keydown(function(e) {
+					//Stallion.key(e).is('enter').preventDefault();
+				if (e.which == Key['enter']) {
+					e.preventDefault();
+				}
+			});
+			checkDocLength();
+			//setInterval(checkDocLength,5000)
+		}) // /document ready
+		})();
+		</script>
+
+
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		    s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+		<script>document.write('<script src="/js/models/'+(function(url){
+		return url.substring(url.lastIndexOf('/')+1);
+		})(window.location.pathname)+'.js"><\/script>')</script>
+	</div>
+    </body>
+</html>
+

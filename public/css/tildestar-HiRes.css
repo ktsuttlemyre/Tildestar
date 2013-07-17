@@ -1,0 +1,4 @@
+.responsive-utilities-test:before{
+	content:"Hi-Res";
+	color:green;
+}

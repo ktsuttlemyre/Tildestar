@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/tildestar.css">
+   <!-- <link rel="stylesheet" href="/css/style.css">-->
+  </head>
+	<body>
+	<div id="contents">
+		<div>
+		  <form method="post" id="login-form" class="well span4">
+		  	<p class="subheading">Login or <a href="/signup" id="create-account">Create An Account</a></p>
+			<input type="text" placeholder="Username" name="user" id="user-tf" class="span4 required">
+		    <div class="input-append">
+		    	<input type="password" placeholder="Password" name="pass" id="pass-tf" class="span3 required">
+		    	<button type="submit" id="btn-login" class="btn btn-primary"><i class="icon-lock icon-white"></i>Sign in</button>
+			</div>
+			<div class="row span5">
+				<a href="#" id="forgot-password" class='span2'>Password Reminder?</a>
+		    	<label id="remember-me" class="checkbox span2">Remember Me
+		    		<input type="checkbox" checked="checked">
+		    	</label>
+		    </div>	    
+		    <div class="clearfix"></div>
+		    <hr>
+		    
+		    <div class="well well-small span3 well-labeled" style="background-color: white">
+		    <span class="label">or sign in with...</span>
+		  	<ul class="unstyled">
+			  	<li><a href="/auth/twitter">Twitter</a></li>
+			  	<li><a href="/auth/facebook">Facebook</a></li>
+			  	<li><a href="/auth/google">Google</a></li>
+			</ul>
+		  	
+		    <div class="btm-links">
+		  	</div>
+		  </div>
+		  </form>
+		  <div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="modal-alert modal hide fade">
+	  <div class="modal-header">
+	    <button data-dismiss="modal" class="close">x</button>
+	    <h3></h3>
+	  </div>
+	  <div class="modal-body">
+	    <p></p>
+	  </div>
+	  <div class="modal-footer">
+	    <button data-dismiss="modal" id="ok" class="btn btn-warning">OK</button>
+	  </div>
+	</div>
+
+	<div id="get-credentials" class="modal-single-input modal hide fade">
+	  <div class="modal-header">
+	    <button data-dismiss="modal" class="close">x</button>
+	    <h3>Retrieve Password</h3>
+	  </div>
+	  <div class="modal-body">
+	    <form method="post" id="get-credentials-form" class="well span5">
+	      <p>Please enter the email address associated with your account</p>
+	      <input type="text" name="email" id="email-tf" class="span5 required">
+	      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+	      <button data-dismiss="modal" id="cancel" class="btn">Cancel</button>
+	      <div class="alert alert-error hide"></div>
+	      <button data-dismiss="alert" class="close"></button>
+	    </form>
+	  </div>
+	  <div class="modal-footer"></div>
+	</div>
+
+	<div id="annixScripts">
+		<!--vendors-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+		<script src="/vendor/jquery-cookie/jquery.cookie.js"></script>
+		<script src="/vendor/form/jquery.form.js"></script>
+		<script src="/vendor/URI.js"></script>
+		<script src="/vendor/underscore/underscore-min.js"></script>
+		<script src="/vendor/backbone/backbone-min.js"></script>
+		<!--<script src="js/Stallion/"></script>-->
+		<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="/js/plugins.js"></script>
+		<script src="/js/tildestar.js"></script>
+
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		    s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+		<script>document.write('<script src="/js/models/'+(function(url){
+		return url.substring(url.lastIndexOf('/')+1);
+		})(window.location.pathname)+'.js"><\/script>')</script>
+	</div>
+
+<script src="/js/views/login.js"></script>
+<script src="/js/controllers/loginController.js"></script>
+<script src="/js/form-validators/loginValidator.js"></script>
+<script src="/js/form-validators/emailValidator.js"></script>
+</body>
+</html>

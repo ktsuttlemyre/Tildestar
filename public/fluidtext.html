@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>~*</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="Interactivity">
+    	<meta name="author" content="Kyle Suttlemyre Twitter@ktsuttlemyre">
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    	<!-- Fav and touch icons -->
+		<!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="../assets/ico/favicon.png">
+		-->
+
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/themes/pageLayout.css" />
+		<link rel="stylesheet" type="text/css" href="css/themes/day.css" />
+		<link rel="stylesheet" href="css/tildestar.css">
+		<style>
+		/*helper css*/
+		.ul-vertical li {
+			float:left;
+			clear:left;
+		}
+
+
+		body {
+			width:100%;
+		  counter-reset: section;           /* Set the section counter to 0 */
+		}
+		#content {
+			position:relative;
+			z-index:1;
+		}
+		#stageRight{
+			position:absolute;top:0px;right:5px;
+			display:none;
+			z-index:0;
+
+			width:100%;height:100%; 
+		}
+
+		.meme{width:200px;height:120px;background-color: gray;color: white}
+		.meme:after { content:'words words \000D \2713  \000D more words';}
+		.meme:before {counter-increment: section;      /* Increment the section counter */
+  		content: "MEME " counter(section) ": "; /* Display the counter */
+  		}
+
+  		.thumbnails li {
+  			float:left;
+  		}
+
+  		/*
+  		.thumbnails li.span7 {
+  			float:right;
+  		}*/
+  		.reference {
+  			width:auto;height:auto;
+  			margin-left: 7px !important;
+  		}
+  		.reference .actions {display:block;}
+
+  		.no-phone .reference .meme{
+  			width:100%; height:480px; float:none;
+  		}
+  		.phone .reference .meme{
+  			width:260px; height:200px; float:none;
+  		}
+
+		.phone .thumbnails>li{
+			float:left !important; /*override bootstrap phone*/
+		}
+
+		.actions {margin:0px 0px;
+			list-style:none;
+			z-index:3;
+			display:none; position: absolute;
+		}
+		.reference .actions ul li {
+			margin-bottom:5px;
+		}
+
+
+		.actions-bottom {
+			bottom:-28px;right:0px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-top:0px;
+			-webkit-border-bottom-right-radius: 4px;
+			-webkit-border-bottom-left-radius: 4px;
+			-moz-border-radius-bottomright: 4px;
+			-moz-border-radius-bottomleft: 4px;
+			border-bottom-right-radius: 4px;
+			border-bottom-left-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+
+		.actions-top-left {
+			left:-28px;top:5px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-right:0px;
+			-webkit-border-top-left-radius: 4px;
+			-webkit-border-bottom-left-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+			-moz-border-radius-bottomleft: 4px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		.actions-top-right-inside {
+			right:4px;top:3px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-right:0px;
+			border-top:0px;
+			-webkit-border-bottom-left-radius: 4px;
+			-moz-border-radius-bottomleft: 4px;
+			border-bottom-left-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		.actions-top-right {
+			right:-28px;top:5px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-left:0px;
+			-webkit-border-top-right-radius: 4px;
+			-webkit-border-bottom-right-radius: 4px;
+			-moz-border-radius-topright: 4px;
+			-moz-border-radius-bottomright: 4px;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		/*Show admin contols*/
+		#content .thumbnails li:hover .actions{
+			display:block;
+		}​
+
+		</style>
+        <script src="vendor/modernizr-2.6.2.min.js"></script>
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+	<div id="nav" class="navbar navbar-inverse navbar-fluid-top">
+		<div class="navbar-inner">
+			<div class="container">
+
+				<a class="brand" href="#">~*</a>
+				<div class="btn-group">
+					<button class="btn btn-inverse">Chess</button>
+					<button class="btn btn-inverse">Store</button>
+					<button class="btn btn-inverse">Players</button>
+					<button class="btn btn-inverse"><span class="icon-share icon-white"></span></button>
+				</div>
+
+				<ul class="responsive-utilities-test">
+					<li class="visible-phone" name="phone">p</li>
+					<li class="visible-tablet" name="tablet">t</li>
+					<li class="visible-desktop" name="desktop">d</li>
+				</ul>
+				<input type="checkbox" id="slide" value="true" />slide <br />
+
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse pull-right">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#chat">Chat</a></li>
+						<li><a href="#wiki">Wiki</a></li>
+						<li><a href="#blog">Blog</a></li>
+						<li><a href="#dev">Dev</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+
+			</div>
+		</div>
+	</div>
+		
+		
+		<div id="content" class="container-fluid">
+			<div class="row-fluid">
+				<!--<div class="span1" style='background-color:red'><!-- empty to make 'center' --</div>-->
+				<div class="span12" >
+					
+<div style="width:50%; height:500px; background-color:lightblue; padding:10px 20px 10px 10px; position:relative">
+    <!--<div data-fluidtext='parent' style='display:inline-block;'>Fidsdfasdfasdfasdffffffffffffffffffffffffffffffext</div>-->
+    <span data-fluidtext='parent' class='impactCaption' style='display:block;background-color:antiquewhite;'>Fluid Text</span>
+    <!--<div data-fluidtext='.31' style='display:block;background-color:lightgreen'>FluidText</div>
+    <div data-fluidtext='parent' style='display:block;background-color:lightgreen'>FluidText</div>
+    <div data-fluidtext='fluid' style='display:block;background-color:lightgreen'>FluidText</div>-->
+    <!--<div data-fluidtext='0.191'>Test</div>-->
+    <div style="margin:0px auto;">just text</div>
+</div>
+
+
+			<!--
+  			<section id="pageSection">
+				<header class="sectionHeader"></header>
+				<article class="sectionArticle"></article>
+				<footer class="sectionFooter"></footer>
+			</section>
+
+ 			<aside id="aside"></aside>
+ 		-->
+ 				</div>
+ 				<!--<div class="span1" style='background-color:red'><!-- empty to make 'center' --</div>-->
+ 			</div>
+		</div>
+
+
+		<footer id="footer"></footer>
+	<!--
+	<div class="tmpl">
+		<script id="tmpl-thumbnail-li" type="text/x-underscore-tmpl">
+			<li id="<%= id %>">
+				<div class="tabs-below thumbnail clearfix position-relative">
+					<div class="tab-content">
+						<div class="tab-pane active" id="C">
+							<div class="meme pull-right"></div>
+						</div>
+					</div>
+					<ul class="nav nav-tabs">
+						<li class="active actions">
+							<ul class="inline"><li>up</li><li>down</li><li>share</li><li>report</li></ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</script>
+	</div>
+	-->
+	<!--
+	<div class="tmpl">
+		<script id="tmpl-thumbnail-li" type="text/x-underscore-tmpl">
+			<li id="<%= id %>">
+				<div class="thumbnail clearfix position-relative">
+					<div class="meme pull-right"></div>
+					<div class="actions tabs-below"><ul class="nav nav-tabs"><li class='active'><a href='#'>up</a></li><li>down</li><li>share</li><li>report</li></ul></div>
+				</div>
+			</li>
+		</script>
+	</div>
+	-->
+	
+	<div class="tmpl">
+		<script id="tmpl-thumbnail-li" type="text/x-underscore-tmpl">
+			<li id="<%= id %>">
+				<div class="thumbnail clearfix position-relative">
+					<div class="meme pull-right"></div>
+					<div class="actions actions-top-right-inside">
+						<ul class="unstyled ul-vertical">
+							<!--<li>&nbsp;</li>-->
+							<li>
+								<a href="#" data-toggle="tooltip" title="Vote up!">
+									<span class="icon-pencil"></span>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#" data-toggle="tooltip" title="Vote up!">
+									<span class="icon-circle-arrow-up"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#" data-toggle="tooltip" title="Vote down :-[">
+									<span class="icon-circle-arrow-down"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#" data-toggle="tooltip" title="Share with Friends">
+									<span class="icon-share"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#" data-toggle="tooltip" title="Report inappropreate">
+									<span class="icon-flag"></span>
+								</a>
+							</li>
+							<!--<li>&nbsp;</li>-->
+						</ul>
+					</div>
+				</div>
+			</li>
+		</script>
+	</div>
+	
+
+	<!--<div id='toleranceMarker' class="tooltip fade left in" style="position:fixed;right:10px; display: block;"><div class="tooltip-arrow" style=""></div><div class="tooltip-inner">HERE</div></div>-->
+
+	<div id="annixScripts">
+		<!--vendors-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+		<script src="/vendor/jquery-cookie/jquery.cookie.js"></script>
+		<script src="/vendor/form/jquery.form.js"></script>
+		<script src="/vendor/URI.js"></script>
+		<script src="/vendor/lodash/dist/lodash.min.js"></script>
+		<script src="/vendor/backbone/backbone-min.js"></script>
+		<!--<script src="js/Stallion/"></script>-->
+		<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="/js/plugins.js"></script>
+		<script src="/js/tildestar.js"></script>
+
+
+
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		    s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+		<script>document.write('<script src="/js/models/'+(function(url){
+		return url.substring(url.lastIndexOf('/')+1);
+		})(window.location.pathname)+'.js"><\/script>')</script>
+	</div>
+    </body>
+</html>
+
+
+
+

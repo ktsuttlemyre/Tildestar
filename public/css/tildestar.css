@@ -1,0 +1,1073 @@
+/*html5 semantics tags */
+article, aside, figure, footer, header, hgroup, menu, nav, section 
+{ display: block; }
+body,html
+{
+   height:100%;   
+}
+img {
+	/*override bootstrap cause setting global max-width100% causes
+	errors when attempting to use the implicit aspect ratios
+	of images
+	https://github.com/twitter/bootstrap/issues/2886
+	https://github.com/twitter/bootstrap/issues/2573
+	https://github.com/twitter/bootstrap/issues/5262*/
+	max-width: none; 
+}
+/* http://www.1stwebdesigner.com/css/how-to-use-css3-orientation-media-queries */
+/* Portrait */
+@media screen and (orientation:portrait) {
+	.visible-portrait {
+		display: inherit !important;
+	}
+	.hidden-portrait{
+		display: none !important;
+	}
+	.visible-landscape {
+		display: none !important;	
+	}
+	.hidden-landscape {
+		display: inherit !important;
+	}
+}
+/* Landscape */
+@media screen and (orientation:landscape) {
+	.visible-portrait {
+		display: none !important;
+	}
+	.hidden-portrait{
+		display: inherit !important;
+	}
+	.visible-landscape {
+		display: inherit !important;	
+	}
+	.hidden-landscape {
+		display: none !important;
+	}
+}
+
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	.media-portrait {
+		display: inherit !important ;
+	}
+	.media-landscape {
+		display: none !important;
+	}
+}
+ 
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.media-portrait {
+		display: inherit !important ;
+	}
+	.media-landscape {
+		display: none !important;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.media-portrait {
+		display: inherit !important ;
+	}
+	.media-landscape {
+		display: none !important;
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.media-portrait {
+		display: none !important ;
+	}
+	.media-landscape {
+		display: inherit !important;
+	}
+}
+
+.TildeStar-wm-Info{
+		background-image:url('../img/TildeStar-wm-White.png') !important;
+		background-origin: padding-box !important;
+		background-repeat: no-repeat !important;
+		background-size: 25px 14px !important;
+		background-attachment: fixed !important;
+		background-position:.5em 1em !important;
+		background-clip: border-box !important;
+}
+
+
+.TildeStar-wm-White{
+		background-image:url('../img/TildeStar-wm-White.png') !important;
+		background-origin: padding-box !important;
+		background-repeat: no-repeat !important;
+		background-size: 25px 14px !important;
+		background-attachment: fixed !important;
+		background-position:.5em 1em !important;
+		background-clip: border-box !important;
+}
+
+.TildeStar-wm-Gray{
+		background-image:url('../img/TildeStar-wm-Gray.png') !important;
+		background-origin: padding-box !important;
+		background-repeat: no-repeat !important;
+		background-size: 25px 14px !important;
+		background-attachment: fixed !important;
+		background-position:.5em 1em !important;
+		background-clip: border-box !important;
+}
+.TildeStar-wm-Light{
+		background-image:url('../img/TildeStar-wm-Light.png') !important;
+		background-origin: padding-box !important;
+		background-repeat: no-repeat !important;
+		background-size: 25px 14px !important;
+		background-attachment: fixed !important;
+		background-position:.5em 1em !important;
+		background-clip: border-box !important;
+}
+
+/*visible tags*/
+.visible-robots{
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+.visible-none{
+	display:none;
+}
+.visible-hidden{
+	visibility:hidden
+}
+
+.spread {
+	width:100%;
+	height:100%;
+}
+
+
+/*
+Mock div to look like text area
+ //http://stackoverflow.com/questions/8956567/how-do-i-make-an-editable-div-look-like-a-text-field
+ // By user : thinkingstiff - http://stackoverflow.com/users/918414/thinkingstiff
+ */
+.textarea {
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    border: 1px solid gray;
+    font: medium -moz-fixed;
+    font: -webkit-small-control;
+    height: 28px;
+    overflow: auto;
+    padding: 2px;
+    resize: both;
+    height:3em;
+    width: 15em;
+    box-shadow:none;
+}
+
+.input {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    background-color: white;
+    background-color: -moz-field;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px 0 lightgray inset;  
+    font: -moz-field;
+    font: -webkit-small-control;
+    margin-top: 5px;
+    padding: 2px 3px;
+    width: 15em;   
+    height:1em;
+    box-shadow:none; 
+}
+
+/* DO NOT USE FOR Fluidtext the css causes weird focus blur and sizing issues 
+http://stackoverflow.com/users/1021751/timing
+by user : timing - http://stackoverflow.com/users/1021751/timing
+*/
+/*div[contenteditable=true] {
+    margin-top: 5px;
+    margin-left: 5px;
+    /*height: 3em;
+    width: 15em;*
+    cursor: text;
+    border: 1px solid #999; 
+
+    box-shadow: inset 0px 1px 4px #666;
+    padding: 10px;
+}*/
+
+
+       
+/*
+Bullseye a css hack used to center an unknown size div 
+Supports: IE6
+
+//original inspiration
+//http://www.jakpsatweb.cz/css/css-vertical-center-solution.html
+
+//Example
+
+<div class="bullseye bullseye-color">
+	<div class="bullseye-padding" style="padding:0em 2em;"> <!--add padding here for undetermined width elements-->
+		<div>
+            any text<br/>aslkdjflkasjdflkjalksjksldfkasdfasdfasdfasdfasdfasdf
+            <b>any height, set width,</b><br/>
+            any content, for example generated from DB<br/>
+            everything is both vertically and horizontally centered<br/>
+		</div>
+	</div>
+</div>
+*/
+		/*add clearfix to bullseye*/
+		.bullseye {
+			*zoom: 1;
+		}
+
+		.bullseye:before,
+		.bullseye:after {
+			display: table;
+			line-height: 0;
+			content: "";
+		}
+
+		.bullseye:after {
+			clear: both;
+		}
+
+        .bullseye {height: 100%; /*overflow: hidden;*/ position: relative; width: 100%;}
+		.bullseye[class] {display: table; position: static;}
+		
+		.bullseye-padding {position: absolute; top: 50%; width: 100%; text-align: center;} /* for explorer only*/
+		.bullseye-padding[class] {display: table-cell; vertical-align: middle; position: static;}
+		
+		.bullseye-inner {position: relative; top: -50%; text-align: left;} /* for explorer only */
+		.bullseye-inner { margin-left: auto; margin-right: auto;} /* for all browsers*/
+		/* optional:*/
+        .bullseye-inner[class] {position: static;} 
+		
+		/* for testing */
+        /*add bullseye color to the outside div and you should only see a 
+        black border,
+        yellow border inside and touching the black border,
+        white space,
+        and a red border around the inner div
+        if any magic pink shows. it is not displaying correctly*/
+		.bullseye-color {border: 4px solid black; background-color: #F0F;}
+        .bullseye-color .bullseye-padding {border: 2px solid yellow; background-color: white; }
+        .bullseye-color .bullseye-inner  {border: 1px solid red;}
+
+
+/* aspect ratio with contrained height using a ghost.gif img
+<!-- The img here is a 1x1px transparent gif from: http://stackoverflow.com/questions/6018611/smallest-data-uri-image-possible-for-a-transparent-image -->
+<div class="aspect-constrain-height" style="height:400px;"> <!--height constraint -->
+  <div>
+    stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>stuff<br>
+  </div>
+  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+</div>
+
+http://stackoverflow.com/questions/6148012/setting-element-width-based-on-height-via-css
+ */
+  .visual-css-test.aspect-constrain-height {
+    background-color:#F0F;
+  }
+  .visual-css-test.aspect-constrain-height > img:first-of-type {
+    border: white 2px solid;
+    background-color:#F0F;
+  }
+  .visual-css-test.aspect-constrain-height > div:first-of-type {
+    background-color:yellow;
+  }
+  .visual-css-test.aspect-constrain-height > div:first-of-type:before {
+    content:"passing";
+      color:#F0F;
+    font-weight:bold;
+  }
+  
+  .aspect-constrain-height {
+    position: relative;/*start an independent layout*/
+    display: inline-block;
+    overflow: hidden;
+    /* Arbitrary input height (adjust this);
+    doesn't need to be a fixed value. apply in html*/
+    /*height: 400px;*/
+  }
+  
+  .aspect-constrain-height > img:first-of-type {
+    /* Adjust this value - this is how widh
+    you want #contents to be, as a fraction
+    of the height of #container.
+    It works because if you only specify the
+    height of an image, it's width will be
+    set automatically to preserve the aspect
+    ratio of the image. In this case the
+    ratio is 1:1 so the image will end up
+    exactly as wide as it is tall.
+
+    aspect image formula (100/(w/h))= aspect
+     */
+    /*height: 25%;    /*apply in html*/
+  }
+  .aspect-constrain-height > div:first-of-type {
+    /* Position this so it exactly matches
+    the size of #container */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+/******************aspect ratio magic ****************
+*Every time you use this aspect ratio method just use this html structure:
+*
+*	<div class="aspect-ratio ratio1x1" style="padding-top:0px"><!--additional chrome-->
+*		<div class="aspect-ratio-inner">
+*	      <!--Content goes in here.--/>
+*		</div>
+*	</div>
+* Insparations
+* http://stackoverflow.com/questions/1495407/css-a-way-to-maintain-aspect-ratio-when-resizing-a-div
+*http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
+*http://alistapart.com/article/creating-intrinsic-ratios-for-video
+   ^possible psudo element code
+   #container
+{
+display: inline-block;
+position: relative;
+}
+
+#container:before
+{
+content: "";
+display: table;
+margin-top: 75%; /* 4:3 aspect ratio *
+}
+
+#element
+{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: silver /* show me! *
+}
+
+*****************************************************/
+/*#constraint {width:50%;}*/
+.aspect-ratio {
+  position:relative;
+  min-height: 0;
+  /*width:100%; /*toggle*/
+}
+* html .aspect-ratio { /* Star html hack only read by IE6*/
+  margin-bottom: 45px;
+  margin-bot\tom: 0;
+}
+
+/*formula 
+  totalWidth/(ratio)
+  100%/(4w/3h) = 75%
+  //inspiration
+  //http://stackoverflow.com/questions/1495407/css-a-way-to-maintain-aspect-ratio-when-resizing-a-div
+*/
+/*landscape ratios*/
+.ratio1x1 { padding-bottom: 100%}
+
+.ratio4x3 { padding-bottom: 75% } /*standard*/
+.ratio3x2 { padding-bottom: 66.666% }
+.ratio8x5 {padding-bottom: 62.5% }
+.ratio1_66x1 {padding-bottom:60.241}
+.ratio16x9 { padding-bottom: 56.25% } /*wide screen*/
+.ratio1_85x1 {padding-bottom: 54.054% }
+.ratio2_39x1 {padding-bottom: 41.841% }
+.ratio2_75x1 {padding-bottom: 36.363% }
+.ratio4x1 { padding-bottom: 25% }
+
+/*specal landscape expected to be used with meme text*/
+.ratio6x1 { padding-bottom: 16.666% }
+.ratio7x1 { padding-bottom:14.2857% }
+.ratio8x1 { padding-bottom: 12.5% }
+.ratio10x1 { padding-bottom: 10% }
+.ratio12x1 { padding-bottom: 8.333% }
+.ratio16x1 { padding-bottom: 6.25% }
+
+/*portrait ratios*/
+.ratio3x4 { padding-bottom: 133.333% }
+.ratio2x3 { padding-bottom:  150% }
+.ratio5x8 {padding-bottom: 160% }
+.ratio1x1_66 {padding-bottom: 166% }
+.ratio9x16 { padding-bottom: 177.77% }
+.ratio1x1_85 {padding-bottom: 185% }
+.ratio1x2_39 {padding-bottom: 239% }
+.ratio1x2_75 {padding-bottom: 275% }
+.ratio1x4 { padding-bottom: 400% }
+
+
+/*style the inner elements (choose only one or one in a div)*/
+/*.aspect div,
+.aspect embed, 
+.aspect object, 
+.aspect img*/
+.aspect-ratio-inner{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;	left: 0;	/*bottom: 0;	right: 0; idk if these are nessissary*/
+ /* max-width:100%;
+  max-height:100%;
+  min-width:100%;
+  min-height:100%;*/
+  overflow:hidden;
+}
+
+
+
+
+/******************page level container****************/
+#pageContainer {
+	margin: 0em auto 0em auto;
+	width: 960px;
+	background-color:red;
+}
+
+#pageHeader {
+	margin:0px auto 0px auto;
+	width:960px;
+	height:82px;
+	position:relative;
+	background-color:orange;
+}
+
+#contentContainer {
+	margin: 0em;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	min-height: 500px;
+	background-color:yellow;
+}
+
+#pageFooter {
+	margin: 0px auto;
+	padding-bottom: 20px;
+	width: 960px;
+	position: relative;
+	background-color:green;
+}
+
+/* Clear Floated Elements */
+/*.clearfix:before, .clearfix:after {content: "\0020"; 
+display: block; height: 0; visibility: hidden;}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }*/
+
+/************** Bootstrap extentions **************/
+.well-labeled {
+	position:relative;
+	top:0px;
+	left:0px;
+	padding-top:1.5em;
+}
+.well-labeled .label{
+  position: absolute;
+  top: -.50em;
+  left: -.50em;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+
+
+/*
+		DEV nots
+.no-js means there is no javascript
+.js means there is javascript (don't really need to use this)
+
+.lt-ie9 //use this as default if you do not know how late to go
+.lt-ie8
+.lt-ie7 later than ie7
+ example 
+ 	div.foo { color: inherit;}
+	.lt-ie9 div.foo { color: #ff8000; }
+*/
+
+/************** Fast classes **************/
+/*helper css*/
+
+	.corners-rounded{
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	}
+
+.ul-horizontal{
+	list-style: none;
+	display:inline;
+}
+.ul-horizontal > li{
+	display:inline;
+}
+.ul-vertical li {
+	float:left;
+	clear:left;
+}
+
+.divider:before{
+	content : "";
+}
+.ul-horizontal .divider{
+	width: 1px;
+	margin: 1px 2px;
+	display:inline-block !important;
+	overflow: hidden;
+	height:100%;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+.ul-vertical .divider{
+	height: 1px;
+	margin: 2px 1px;
+	display:block !important;
+	overflow: hidden;
+	width:100%;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+/*
+http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting
+*/
+.select-none{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.position-relative{
+	position:relative !important;
+	top:0px !important;
+	left:0px !important;
+}
+.top-padding {
+	padding-top:1.5em;
+}
+.position-absolute{
+	position:absolute; !important;
+}
+
+
+.padded{
+	padding:2em;
+}
+.fadedFont{
+	color:#aebecc;
+}
+.fill-height{
+	height:100%;
+	min-height: 100%;
+}
+.vAlignContents{
+	position:relative;
+	top:0px;
+	left:0px;
+}
+.vAlignContents > div{
+		margin: auto;
+		position: absolute;
+		top: 0em;
+		bottom: 0em;
+		left: 0em;
+		right: 0em;
+}
+.center{margin-left:auto !important;
+		margin-right: auto !important;}
+
+.vertical-center{margin: auto;
+		position: absolute;
+		top: 0em;
+		bottom: 0em;
+		left: 0em;
+		right: 0em;
+}
+.valignBottom{
+	vertical-align:bottom;
+}
+
+.click-on {
+	pointer-events:auto;          /* THIS IS THE TRICK YOU SEEK */
+ }
+
+.click-off {
+	pointer-events:none;          /* THIS IS THE TRICK YOU SEEK */
+ }
+.lt-ie9 .click-off {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sample_600x600.png', sizingMethod='scale');
+	background:none !important;
+}
+.float-right{
+	float:right;
+}
+.float-left{
+	float:left;
+}
+.absTopRight{
+	position:absolute;
+	top:.75em;
+	right:.75em;
+}
+.underline-false{
+	text-decoration:none;
+}
+
+/* CSS TAbles
+* Insparation http://snook.ca/archives/html_and_css/getting_your_di
+*
+*
+*/
+.table {
+	display: table;
+}
+.table-caption {
+	/*todo*/
+}
+.table-head {
+	/*todo*/
+}
+.table-foot {
+	/*todo*/
+}
+.table-body{
+	display:table-row-group;
+}
+.table-row { /*row*/
+	display: table-row;
+}
+.table-data { /*cell*/
+	display: table-cell;
+}
+
+/************************************
+* CSS 3 animations
+************************************/
+/*@-webkit-keyframes pulse_animation {
+	0% { -webkit-transform: scale(1); opacity: 1;}
+	30% { -webkit-transform: scale(1); opacity: 1;}
+	40% { -webkit-transform: scale(1.08); opacity: 0.8; }
+	50% { -webkit-transform: scale(1); opacity: 1; }
+	60% { -webkit-transform: scale(1); opacity: 1;}
+	70% { -webkit-transform: scale(1.05); opacity: 0.8;}
+	80% { -webkit-transform: scale(1); opacity: 1;}
+	100% { -webkit-transform: scale(1); opacity: 1;}
+}*/
+@-webkit-keyframes pulse_animation {
+	0% { -webkit-transform: scale(2); opacity: 1; z-index:99;}
+	10% { -webkit-transform: scale(2); opacity: 1;}
+	20% { -webkit-transform: scale(1.10); opacity: 1; }
+	30% { -webkit-transform: scale(1); opacity: 1; }
+	40% { -webkit-transform: scale(1); opacity: 1;}
+	50% { -webkit-transform: scale(1.07); opacity: 0.8;}
+	60% { -webkit-transform: scale(1); opacity: 1;}
+	/*70% { -webkit-transform: scale(1); opacity: 1;}
+	80% { -webkit-transform: scale(1.04); opacity: 0.9;}
+	90% { -webkit-transform: scale(1); opacity: 1;}*/
+	100% { -webkit-transform: scale(1); opacity: 1; z-index:auto;}
+}
+@-moz-keyframes pulse_animation {
+ 	0% { -webkit-transform: scale(2); opacity: 1; z-index:99;}
+	10% { -webkit-transform: scale(2); opacity: 1;}
+	20% { -webkit-transform: scale(1.10); opacity: 1; }
+	30% { -webkit-transform: scale(1); opacity: 1; }
+	40% { -webkit-transform: scale(1); opacity: 1;}
+	50% { -webkit-transform: scale(1.07); opacity: 0.8;}
+	60% { -webkit-transform: scale(1); opacity: 1;}
+	/*70% { -webkit-transform: scale(1); opacity: 1;}
+	80% { -webkit-transform: scale(1.04); opacity: 0.9;}
+	90% { -webkit-transform: scale(1); opacity: 1;}*/
+	100% { -webkit-transform: scale(1); opacity: 1; z-index:auto;}
+}
+.pulse {
+	-moz-animation:pulse_animation 3000ms 0 linear 1; 
+    -webkit-animation:pulse_animation 3000ms 0 linear 1; 
+
+ /*   -webkit-animation-name: 'pulse_animation';
+	-webkit-animation-duration: 3000ms;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;*/
+}
+
+@-webkit-keyframes ani-slide-hide-down {
+	0%  { -webkit-transform: position:absolute; top: 0%; left:0%; }
+	100%  { -webkit-transform: position:absolute; top: 100%; left:0%; }
+}
+@-webkit-keyframes ani-peak-up {
+	0%  { -webkit-transform: position:relative; top: 0em; left:0%; }
+	100%  { -webkit-transform: position:relative; top: -5em; left:0%; }
+}
+
+
+.slide-hide-down{
+	position:absolute; 
+	-moz-animation:ani-slide-hide-down 1000ms 0 ease 1; 
+	-webkit-animation:ani-slide-hide-down 1000ms 0 ease 1; 
+	-webkit-animation-fill-mode: forwards;
+}
+
+
+
+
+/*
+ http://stackoverflow.com/questions/4910963/how-to-create-a-pulse-effect-using-web-kit-animation-outward-rings
+*/
+.gps_ring {
+    border: 3px solid #999;
+    -webkit-border-radius: 30px;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    left:20px;
+    top:214px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+/*containing element must be position-relative*/
+.close-circle {
+	/*normalization*/
+	text-shadow:none;
+	/*base*/
+	display: inline-block;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	/*create circle*/
+	border-radius: 50%;
+	width:1em;
+	height:1em;
+	font-size: 2.25em;
+	/*center center*/
+	text-align: center;
+	line-height: 1em; /*must be same as height*/
+	/*set it in the corner*/
+	position: absolute;
+	top:-.5em;
+	right:-.5em;
+	/*customization*/
+	cursor: pointer;
+	color: white;
+	border: .2em solid white;
+	background: #605F61;
+}
+.close-circle:before{
+ content: "×";
+}
+/*bulge on hover*/
+.close-circle:hover{
+	/*create circle*/
+	width:1.25em;
+	height:1.25em;
+	/*center center*/
+	text-align: center;
+	line-height: 1.25em; /*must be same as height*/
+	/*set it in the corner*/
+	position: absolute;
+	top:-.75em;
+	right:-.75em;
+	/*customization*/
+	background-color: #706F71;
+}
+
+
+/***************Class Elements ***********/
+#annixScripts{
+	display:none;
+}
+
+/*
+footer toolbar
+for displaying user chat and tabs
+*/
+.footerToolbar {
+   position:fixed;
+   left:0em;
+   bottom:0em;
+   height:2em;
+   width:100%;
+   overflow:visible; margin:0em;padding:0em
+
+}
+/* IE 6 */
+.lt-ie6 #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+/*idea from 
+http://ekdhl.net/blog/2012/10/19/fixed-width-static-sidebar-with-twitter-bootstrap-fluid-layout/
+*/
+#main > .row-fluid { float: left; margin-right: -310px; } /* -(advert.width+advert.margin-left) */
+#inner-container { margin-right: 310px; } /*advert.width + advert.margin-left*/
+#advert { float: left; width: 300px; margin-left: 10px; } /*set this to the width you need*/
+
+body{margin-bottom:60px;}
+
+/* Responsive tests
+------------------------- */
+.responsive-utilities-test {
+	color:#777;
+	display:inline-block;
+	padding:.50em 2em .50em .75em;
+	border: 1px solid #777;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	width:2em;
+	height: 1em;
+}
+
+
+.responsive-utilities-test ul{
+	margin:0px !important;
+	padding:0px 2em !important;
+	position: relative;
+	top:0px;
+	left:0px;
+	list-style: none;
+	overflow: hidden; /* clear floats */
+	display:inline;
+}
+.responsive-utilities-test li {
+	margin:0px !important;
+	padding:0px ;
+	position: absolute;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+.responsive-utilities-test li + li {
+  margin-left: .25em !important;
+}
+
+
+/*used to shape buddy icons*/
+.tearDropBL{
+-webkit-border-radius: 30px;
+-webkit-border-bottom-left-radius: 0;
+-moz-border-radius: 30px;
+-moz-border-radius-bottomleft: 0;
+border-radius: 30px;
+border-bottom-left-radius: 0;
+}
+.tearDropBR{
+-webkit-border-radius: 30px;
+-webkit-border-bottom-right-radius: 0;
+-moz-border-radius: 30px;
+-moz-border-radius-bottomright: 0;
+border-radius: 30px;
+border-bottom-right-radius: 0;
+}
+
+
+
+.hover-expand-left, .hover-expander{
+	width:0px;
+
+}
+
+.hover-expand-left:hover, .hover-expander{
+	-webkit-transition: width .3s ease-in-out;
+	-moz-transition: width .3s ease-in-out;
+	-o-transition: width .3s ease-in-out;
+	transition: width .3s ease-in-out;
+	width:500px;
+}
+
+/*this creates the vertical header layout*/
+/*like what is used in feedback tab */
+/*http://css-tricks.com/sideways-headers/*/
+.vertical-header-left {
+    background:#ffc;
+    display: block;
+    position: relative;  
+    padding: 3em 3.5em .5em .7em; 
+    margin: 0px;
+    overflow: hidden;
+    }
+    .vertical-header-left p {
+        margin: 0 0 1em 1em;
+        -webkit-transform: translateX(2.5em) translateY(-2em); 
+        -moz-transform:    translateX(2.5em) translateY(-2em); 
+        -ms-transform:     translateX(2.5em) translateY(-2em); 
+        -o-transform:      translateX(2.5em) translateY(-2em); 
+        transform:         translateX(2.5em) translateY(-2em);     
+        }
+
+.vertical-header-left h1 {
+    font: 16px Georgia, Serif;
+    background: #369;
+    color: #fff;
+    padding: .7em;
+    margin: 0;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    -webkit-transform: rotate(90deg) translateX(20px); 
+    -moz-transform:    rotate(90deg) translateX(20px);
+    -ms-transform:     rotate(90deg) translateX(20px);
+    -o-transform:      rotate(90deg) translateX(20px); 
+    transform:         rotate(90deg) translateX(20px); 
+    -webkit-transform-origin: 1.8em .5em;
+    -moz-transform-origin:    1.8em .5em;
+    -ms-transform-origin:     1.8em .5em;
+    -o-transform-origin:      1.8em .5em;
+    transform-origin:         1.8em .5em;
+    }
+
+
+
+.vertical-text-left {
+	writing-mode:tb-rl;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+	white-space:nowrap;
+	/*color:#333;
+	border:0px solid red;
+	display:block;
+	bottom:0;
+	width:20px;
+	height:20px;
+	font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:normal;
+	text-shadow: 0px 0px 1px #333*/
+}
+
+.vertical-text-right {
+	margin:0px;
+
+	writing-mode:tb-rl;
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	white-space:nowrap;
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	/*color:#333;
+	border:0px solid red;
+	display:block;
+	bottom:0;
+	width:20px;
+	height:20px;
+	font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:normal;
+	text-shadow: 0px 0px 1px #333*/
+}
+
+
+/*status colors for online/offline etc*/
+.friendStatusOnline{
+	background-color: green;
+}
+.friendStatusOffline{
+	background-color: gray;
+}
+.friendStatusAway{
+	background-color: yellow;
+}
+.friendStatusIdle{
+	background-color: red;
+}
+.bold{
+	font-weight: bold;
+}
+
+/*for image overlaying*/
+.memeIcon { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+.memeIconText{
+	color: #FFF; /* text color */
+	-webkit-text-stroke: 1px #000; /* stroke color and weight */
+	position: absolute; 
+	bottom: .25em; 
+	left: 0; 
+	width: 100%; 
+}
+.popParent{
+	overflow:visible;
+	position:relative;
+}
+.yPop{
+	position:absolute;
+	top:-1em;
+
+}
+
+.privateChatContainer{
+	display:inline-block;
+	overflow:visible;
+	position:absolute;
+	bottom:0em;
+	margin:0em;
+	padding:0em;
+}
+.privateChatContainer ul{
+/*	margin-top:-35px*/
+	margin:0em 1em;
+
+}
+.privateChatContainer ul li
+{
+display: inline-block;
+list-style-type: none;
+padding-right: .25em;
+
+}
+.box64x64{
+	display:block;width: 64px; height: 64px;
+}
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+.chatStage{
+	width:15em;
+	height:15em;
+	padding:0em;
+	margin:0em;
+	background-color: white;
+}
+.chatStatement{
+	position:relative;
+	display: inline-block;
+	list-style-type: none;
+	padding-left: .25em;
+}
+
+.cut-out .image-wrap {
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+
+/*****************list mods*******************/
+

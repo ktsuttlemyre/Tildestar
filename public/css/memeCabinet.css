@@ -1,0 +1,518 @@
+
+
+
+		body {
+			width:100%;
+		  white-space:nowrap;
+		  background-color: rgb(245, 245, 245);
+		  padding-left: 0px;
+		  padding-right: 0px;
+		}
+
+		.nav.nav-tabs{
+			z-index:4;
+		}
+		.tab-pane {
+			z-index:3;
+			padding-top: 2em !important;
+		}
+		.page-hr{
+
+		}
+		/*
+		.viewed {
+			transition:opacity .3s linear; 
+			-o-transition:opacity .3s linear; 
+			-moz-transition:opacity .3s linear; 
+			-webkit-transition:opacity .3s linear;
+			opacity: .45;
+			position:relative;
+		}
+		.viewed:before{
+			z-index:99;
+			font-size: 2em;
+			position: absolute;
+			text-align:center;
+			bottom:0em;
+			right:0em;
+			font-family: FontAwesome !important;
+			color:white;
+			content: "\f070";
+		}
+		.viewed:after{
+			z-index:98;
+			font-size: 2.1em;
+			position: absolute;
+			text-align:center;
+			bottom:0em;
+			right:0em;
+			color:black;
+			font-family: FontAwesome !important;
+			content: "\f070";
+		}
+		.viewed.reference, .viewed.marker, .viewed:hover{
+			opacity: 1;
+			
+		}*/
+
+
+
+		#content {
+			position:relative;
+			z-index:1;
+		}
+		#stageRight{
+			
+			position:absolute;top:0px;left:0px; /*right:0px;bottom:0px;*/
+			width:100%;
+			display:none;
+			z-index:2;
+			height:auto;			
+		}
+
+		.infoStage {
+			color:white;
+			display:inline-block !important; /*override bootstrap*/
+			float:none !important; /* override bootstrap */
+		}
+
+  .carousel-control {
+
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+  		.thumbnails > li {
+			/*transition:all .9s linear; 
+			-o-transition:all .9s linear; 
+			-moz-transition:all .9s linear; 
+			-webkit-transition:all .9s linear;*/
+  			float:left;
+  		}
+  		ul.thumbnails:before, ul.thumbnails:after {
+  			display:inline !important; /*override bootstrap*/
+  		}
+  		.phone .thumbnails>li{
+			float:left !important; /*override bootstrap phone*/
+		}
+		.phone .thumbnails li{
+			margin-left: 10px;
+		}
+
+  		/*
+  		.thumbnails li.span7 {
+  			float:right;
+  		}*/
+
+  		/*main image display*/
+  		.reference {
+  			width:auto;
+  			margin-left: 8px !important;
+  		}
+
+  		/************* height normalization *************/
+  		.phone .reference.normalize-height {
+			height:200px;
+			/*height:50vh;/*toggle*/
+
+  		}
+  		.no-phone .reference.normalize-height {
+			height:480px;
+			/*height:50vh;/*toggle*/
+  		}
+
+  		.no-phone .normalize-height{
+  			height:200px;
+  			/*height:20vh;/*toggle*/
+  		}
+  		.phone .normalize-ratio {
+  			padding-bottom:75%;
+  		}
+  		.phone .reference .normalize-ratio {
+			 padding-bottom: 75%;
+
+  		}
+  		.no-phone .reference .normalize-ratio {
+			 padding-bottom: 56.25%;
+  		}
+
+  		.no-phone .normalize-ratio{
+  			 padding-bottom: 62.5%;
+  		}
+
+  		.edit-ratio{
+  			padding-bottom: 62.5%;
+  		}
+
+
+  		/*my span2Responsive class*/
+  		.span2Responsive{
+  			margin:1% !important;
+  		}
+  		.row-fluid .span2Responsive {
+  			/*width: 14.52991452991453%; /*span2 fluid*/
+  			width:18.00000%; /*difference between/2 +-fudge
+  			/*width: 23.404255319148934%; /*span3 fluid*/
+  		}
+  		.tablet .row-fluid .span2Responsive{
+  			width: 29.0%; /*span4 fluid*/
+  		}
+  		.phone .row-fluid .span2Responsive {
+  			width:95%; /*all span on phone*/
+  		}
+
+
+
+  		/*.phone .meme {
+			height:120px
+  		}*/
+  		.meme {
+			/*height:100%;/*toggle*/
+			/*left: 50%;*/
+			margin: 0px auto;/* 0px -75%;*/
+			color: white;
+
+			max-width: 100%;
+  			max-height:100%;
+  		}
+
+  		/*where to position the meme image*/
+  		.phone .meme{color: white}
+  		
+		/*.meme:after { content:'words words \000D \2713  \000D more words';}
+		.meme:before {counter-increment: section;      /* Increment the section counter *
+			content: "MEME " counter(section) ": "; /* Display the counter *
+		}
+		*/
+  		.reference .meme{
+  			float:none;
+  		}
+  		.phone .reference {
+  			margin-bottom: 210px;
+  		}
+
+  		.shadow-light {
+  			-webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.4);
+			-moz-box-shadow: 0px 5px 8px rgba(0,0,0,0.4);
+			box-shadow: 0px 5px 8px rgba(0,0,0,0.4);
+  		}
+  		/* used for aspect ratio using gif and child to parent width propigation
+  		.memeCells{
+  			display:inline-block;
+  			width:100%;
+  			height:100%;
+
+  			max-width: 100%;
+  			max-height:100%;
+  		}
+  		.memeCell{
+  			display:inline-block;
+  			height:100%;
+  			position:relative;
+		 	width: 100%; /* for IE 6 /
+
+  		}*/
+
+  		/*.memeCells{
+  			display:inline-block;
+  			width:100%;
+  			height:100%;
+
+  			max-width: 100%;
+  			max-height:100%;
+  		}*/
+  		/*.memeCell{
+  			display:inline-block;
+  			height:100%;
+  			position:relative;
+		 	width: 100%; /* for IE 6 //
+
+  		}*/
+
+  		.memeCell img{
+  			max-width: 100%;
+  			max-height:100%;
+
+
+  		}
+  
+
+  		.marker{
+	  		-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			background-color:#00aaee;
+			-webkit-box-shadow: 0px 5px 8px rgba(0,0,0,0.4);
+			-moz-box-shadow: 0px 5px 8px rgba(0,0,0,0.4);
+			box-shadow: 0px 5px 8px rgba(0,0,0,0.4);
+  		}
+
+  		.impact-small {
+  			text-align: center;
+			font-family: "Arial Black", sans-serif;
+			color: black;
+			/*-webkit-text-stroke: 1px #444;*/
+			
+			text-shadow:
+				 1px  1px 0 #444,
+				-1px  1px 0 #444,
+				 1px -1px 0 #444,
+				-1px -1px 0 #444;
+  		}
+  		a.impact-small:hover{
+  			color:black;
+  		}
+  		.impactCaption {
+			text-align: center;
+			font-family: impact, "Arial Black", sans-serif;
+			font-size: 6em;
+
+			/* WebKit (Safari/Chrome) Only */
+			/*-webkit-text-stroke: 1px black;*/
+
+			/* If we weren't using text-shadow, we'd set a fallback color
+			 and use this to set color instead */
+			/*-webkit-text-fill-color: white;*/
+			color: white;
+
+			text-shadow:
+				 1px  1px 0 #000,
+				-1px  1px 0 #000,
+				 1px -1px 0 #000,
+				-1px -1px 0 #000;
+
+  		}
+  		.reference .impactCaption {
+			text-align: center;
+			font-family: impact, "Arial Black", sans-serif;
+			font-size: 6em;
+
+			/* WebKit (Safari/Chrome) Only */
+			/*-webkit-text-stroke: 1px black;*/
+
+			/* If we weren't using text-shadow, we'd set a fallback color
+			 and use this to set color instead */
+			/*-webkit-text-fill-color: white;*/
+			color: white;
+
+			text-shadow:
+				-2px -2px 0 #000,  
+				 2px -2px 0 #000,
+				-2px  1px 0 #000,
+				 2px  2px 0 #000,
+
+				 0px -2px 0 #000,  
+				 0px  2px 0 #000,
+				-2px  0px 0 #000,
+				 2px  0px 0 #000;
+
+  		}
+  		/*
+  		http://stackoverflow.com/questions/4919076/outline-effect-to-text
+  		 */
+		html.lt-ie9 .impactCaption {
+			background-color: white;
+			filter: progid:DXImageTransform.Microsoft.Chroma(color='white') progid:DXImageTransform.Microsoft.Alpha(opacity=100) progid:DXImageTransform.Microsoft.dropshadow(color=#ffffff,offX=1,offY=1) progid:DXImageTransform.Microsoft.dropshadow(color=#ffffff,offX=-1,offY=1) progid:DXImageTransform.Microsoft.dropshadow(color=#ffffff,offX=1,offY=-1) progid:DXImageTransform.Microsoft.dropshadow(color=#ffffff,offX=-1,offY=-1);
+			zoom: 1;
+		}
+
+		.search-site input{
+			-webkit-transition: width .3s ease-in-out;
+			-moz-transition: width .3s ease-in-out;
+			-o-transition: width .3s ease-in-out;
+			transition: width .3s ease-in-out;
+			width:1em;
+			background-color: white;
+			font-family: FontAwesome !important;
+		}
+		.search-site input:focus{
+			width:17em;
+			font-family: "Arial Black", sans-serif;
+			/*color: white;
+			-webkit-text-stroke: 1px #444;
+			
+			text-shadow:
+				 1px  1px 0 #777,
+				-1px  1px 0 #777,
+				 1px -1px 0 #777,
+				-1px -1px 0 #777;*/
+		}
+
+/*extend slide-hide-down for editor*/
+#editor.slide-hide-down> #editor-background{ 
+	display:none;
+}
+/*when hiding the editor make the padding 0 so that the nav bar shows correctly*/
+#editor.slide-hide-down{
+	padding-top: 0em;
+}
+/*when not hiding the editor, make sure the top of the div never hits the top of the viewport*/
+#editor{
+	padding-top: 2em;
+}
+.slide-hide-down .navbar {
+	cursor: pointer;
+	position: relative;
+	-moz-animation:ani-peak-up 1000ms 0 ease 1; 
+	-webkit-animation:ani-peak-up 1000ms 0 ease 1; 
+	-webkit-animation-fill-mode: forwards;
+
+}
+#editor-stage{
+	overflow: auto;
+}
+  		
+		/*style actions*/
+		/*init*/
+		.actions {margin:0px 0px;
+			list-style:none;
+			text-align: center;
+			z-index:3;
+			display:block;
+
+			/*position: absolute;*/
+		}
+		/*extra styling*/
+		.actions li{
+			display:inline;
+			position: relative;
+		}
+
+		/*helper classes for action placement*/
+		.actions-bottom {
+			bottom:-28px;right:0px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-top:0px;
+			-webkit-border-bottom-right-radius: 4px;
+			-webkit-border-bottom-left-radius: 4px;
+			-moz-border-radius-bottomright: 4px;
+			-moz-border-radius-bottomleft: 4px;
+			border-bottom-right-radius: 4px;
+			border-bottom-left-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		.actions-top-left {
+			left:-28px;top:5px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-right:0px;
+			-webkit-border-top-left-radius: 4px;
+			-webkit-border-bottom-left-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+			-moz-border-radius-bottomleft: 4px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		.actions-top-right-inside {
+			right:4px;top:3px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-right:0px;
+			border-top:0px;
+			-webkit-border-bottom-left-radius: 4px;
+			-moz-border-radius-bottomleft: 4px;
+			border-bottom-left-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			z-index: 4;
+		}
+		.actions-top-right {
+			right:-26px;top:5px;
+			background-color: white;
+			padding: 4px;
+			line-height: 20px;
+			border: 1px solid #ddd;
+			border-left:0px;
+			-webkit-border-top-right-radius: 4px;
+			-webkit-border-bottom-right-radius: 4px;
+			-moz-border-radius-topright: 4px;
+			-moz-border-radius-bottomright: 4px;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			z-index: 4;
+		}
+
+		/*tooltip hiding and showing*/
+		.actions .tooltip{
+			-webkit-transition: opacity .3s ease-in-out;
+			-moz-transition: opacity .3s ease-in-out;
+			-o-transition: opacity .3s ease-in-out;
+			transition: opacity .3s ease-in-out;
+			bottom:100%; right: .5em;  opacity:0;
+		}
+		/*.actions a:hover {
+			font-style: normal;
+		}
+		.actions a:hover span{
+			-webkit-transform: scale(1.5);
+			/*font-size: 1.5em;/*toggle/
+		}
+		.actions a:hover + .tooltip{
+			opacity: 1;
+		}*/
+		
+		/*show action commands on the main reference*/
+		.reference .actions ul li {
+			font-size: 2em;
+			margin-bottom:5px;
+		}
+
+		/*initally hide the controls*/
+		.actions ul{
+			/*display:none;/*toggle*/
+			visibility:hidden;/*toggle*/
+		}/*make the score visible*/
+		.actions ul:first-child{
+			/*display:inline-block;/*toggle*/
+			visibility: visible;
+		}
+
+		/*Show action contols on hover*/
+		#content .thumbnails li:hover .actions>ul,
+		/*and when referenced*/
+		.reference .actions ul {
+			/*display:inline-block;/*toggle*/
+			visibility:visible;
+		}​
+
+
+		
+
+
+

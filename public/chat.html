@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>TildeStar Chat</title>
+
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/tildestar.css">
+
+
+		<link href="/styles/animate.css" rel="stylesheet" type="text/css" />
+		<link href="/styles/style.css" rel="stylesheet" type="text/css" />
+		
+	</head>
+	<body>
+	
+		<header>
+
+		</header>
+
+		<div id="content" class="valign fill-height">
+			<div class="valign cf chat animate container-fluid fill-height">
+				<div class="cf chat-row row-fluid fill-height">
+					<div id="chat-left" class="span8 fill-height">
+					</div>
+					<div id="chat-right" class="span4">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+
+<div class="tmpl">
+	<script id="tmpl-chat-main" type="text/x-underscore-tmpl">
+		<div id="<%= id %>">
+			<div class="chat-messages">
+				<ul></ul>
+			</div>
+			<div class="chat-inputPanel">
+				<div class="input-append chat-input row-fluid">
+
+				  <input class="span9" placeholder="compose..." id="appendedInputButton" type="text" />
+				  <button class="btn" type="button">Send</button>
+				</div>
+			<div>
+		</div>
+	</script>
+
+	<!--requires {parentID,id,title,innerHTML} -->
+	<script id="tmpl-accordion-group" type="text/x-underscore-tmpl">
+		<div class="accordion-group" id ="<%= id %>">
+		  <div class="accordion-heading">
+		    <a class="accordion-toggle" data-toggle="collapse" data-parent="#<%= parentID %>" href="#<%= id %>-body">
+		      <%= title %>
+		    </a>
+		  </div>
+		  <div id="<%= id %>-body" class="accordion-body collapse">
+		    <div class="accordion-inner">
+		    	<%= innerHTML %>
+		    </div>
+		  </div>
+		</div>
+	</script>
+
+
+	<!--requires {id,innerHTML}-->
+	<script id="tmpl-accordion" type="text/x-underscore-tmpl">
+	<div class="accordion" id="<%= id %>">
+		<%= innerHTML %>
+	</div>
+	</script>
+</div>
+
+ 
+<!-- Modal -->
+<div id="nickname-popup" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Enter a nickname</h3>
+  </div>
+  <div class="modal-body">
+    <div class="content">Please select a nickname, up to 15 characters</div>
+    <div class="input"><input type="text" maxlength="15" placeholder="nickname..." /></div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
+
+	<div id="addroom-popup" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Enter a room name</h3>
+  </div>
+    <div class="modal-body">
+    <div class="content">Room name up to 10 characters</div>
+    <div class="input"><input type="text" maxlength="10" placeholder="room name..." /></div>
+  </div>
+    <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Create &rarr;</button>
+  </div>
+	</div>
+	<div class="avgrund-cover"></div>
+
+
+		<footer class="display-none">
+
+		</footer>
+
+	<div id="annixScripts">
+		<!--vendors-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+		<script src="/vendor/jquery-cookie/jquery.cookie.js"></script>
+		<script src="/vendor/form/jquery.form.js"></script>
+		<script src="/vendor/URI.js"></script>
+		<script src="/vendor/lodash/dist/lodash.min.js"></script>
+		<script src="/vendor/backbone/backbone-min.js"></script>
+		<!--<script src="js/Stallion/"></script>-->
+		<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="/js/plugins.js"></script>
+		<script src="/js/tildestar.js"></script>
+
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		    s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+		<script>document.write('<script src="/js/models/'+(function(url){
+			var iSlash=url.lastIndexOf('/'),iDot=url.lastIndexOf('.');
+			if(iSlash==url.length){
+				return url.substring(iSlash+1);
+			}else{
+				return url.substring(iSlash+1,iDot);
+			}
+		
+		})(window.location.pathname)+'.js"><\/script>')</script>
+	</div>
+		
+
+		<script type="text/javascript">
+		$('h1 sup').on('click', function () {
+			if($('.chat').hasClass('bounceOutRight')){
+				$('.chat').removeClass('bounceOutRight');
+				$('.chat').addClass('bounceInLeft');
+				
+				$('.info').removeClass('bounceInLeft');
+				$('.info').addClass('bounceOutRight');
+				
+				window.setTimeout(function(){
+					$('.chat').removeClass('bounceInLeft');
+				}, 1500);
+			} else {
+				$('.chat').removeClass('bounceInLeft');
+				$('.chat').addClass('bounceOutRight');
+				
+				$('.info').removeClass('bounceOutRight');
+				$('.info').addClass('bounceInLeft');
+			}
+			
+		});
+		</script>
+		<script type="text/javascript" src="/scripts/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="/scripts/chat.io.js"></script>
+
+	</body>
+
+</html>

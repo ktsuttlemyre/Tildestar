@@ -1,0 +1,43 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Main Developer/Programmer/Project Manager: Kyle Suttlemyre
+	Twitter: @KTSuttlemyre
+	From: NC, US
+
+# THANKS
+
+	Twitter: @hakimel
+
+# TECHNOLOGY COLOPHON
+
+	Standards: HTML5, CSS3
+	
+	Frontend:
+		Technology:Normalize.css
+		Source: http://necolas.github.com/normalize.css/
+	
+		Technology: jQuery
+		Source: http://jquery.com/
+	
+		Technology: Modernizr
+		Source : http://modernizr.com/
+	
+		Technology: Meny
+		Source: http://hakim.se/
+
+	Backend:
+		Nodejs
+
+		Appfog
+		
+		socket.io
+		
+		express
+		
+		
+		- Animate.css library - by Dan Eden: http://daneden.me/animate/
+- Avgrung modal - by Hakim El Hattab: http://lab.hakim.se/avgrund/
+		
