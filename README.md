@@ -1,44 +1,33 @@
-Multi-Room Chat Application
+Tildestar
 ===
 
-This application created as part of a node.js and socket.io tutorial.
-It includes a server built in node.js and a html client.
-
-You can read the full tutorial at:
-http://udidu.blogspot.com/2012/11/chat-evolution-nodejs-and-socketio.html
+This application is a website where I allow myself to play with the Node.js
+environment as well as explore the full extent of the javascript engine (mostly 
+within the chrome V8 enigne. It is my own personal play ground where I emphasize
+learning over having a product.
 
 ### To run:
 
-Please be sure you have expressjs and socket.io modules installed before running this application.
+It may or may not run on other machines. It is not intended to run anywhere else
+at this moment other than on my machine and on top of appfog.com
 
 On Windows/Mac/Linux:
 
-	$ node server.js
-	
-After running go to this address:
+	$ node server-tildestar.js
 
-	http://locahost:8080/
 	
-
 ### Live demo
 
 For a live demo go to:
 
-	http://uditalias.github.com/chat-nodejs/public
+	http://tildestar.com/memeCabinet8.html
 	
 
 	
 ### Credits
 
-This application uses the following:
-
-- Animate.css library - by Dan Eden: http://daneden.me/animate/
-- Avgrung modal - by Hakim El Hattab: http://lab.hakim.se/avgrund/
+Refere to ./public/humans.txt for credits.
 
 
-### Future features
-
-- Chat history with MongoDB and LocalStorage
-- Private chat with users
 	
 ###Enjoy!
